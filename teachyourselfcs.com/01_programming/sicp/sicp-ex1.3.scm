@@ -12,14 +12,18 @@
 ;; * for c: (> c a), (> c b)
 ;; It took a while to figure the right conditional to group
 ;; them correctly :)
+;; Update: defined (sum-of-two-squares x y), just for fun.
 
 (define (square-of-two-larger a b c)
-  (cond ((and (> a b) (> b c)) (+ (square a) (square b)))
-        ((and (> c b) (> b a)) (+ (square b) (square c)))
-        (else (+ (square a) (square c)))))
+  (cond ((and (> a b) (> b c)) (sum-of-two-squares a b))
+        ((and (> c b) (> b a)) (sum-of-two-squares b c))
+        (else (sum-of-two-squares a c))))
 
 (define (square x)
   (* x x))
+
+(define (sum-of-two-squares x y)
+  (+ (square x) (square y)))
 
 ;; tests:
 (square-of-two-larger 3 5 5)  ;;  should be 34 (25 + 9)
