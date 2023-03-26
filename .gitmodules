@@ -1,3 +1,6 @@
 [submodule "2015-bryant_ohallaron-csapp"]
 	path = 2015-bryant_ohallaron-csapp
 	url = git@github.com:alexdesiqueira/2015-bryant_ohallaron-csapp.git
+[submodule "2020-wengrow-csg_to_dsa"]
+	path = 2020-wengrow-csg_to_dsa
+	url = git@github.com:alexdesiqueira/2020-wengrow-csg_to_dsa.git
